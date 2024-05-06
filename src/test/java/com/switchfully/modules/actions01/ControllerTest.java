@@ -12,7 +12,6 @@ import static io.restassured.http.ContentType.JSON;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@AutoConfigureTestDatabase
 class ControllerTest {
 
     public static final String EXPECTED_RESPONSE = "ok";
