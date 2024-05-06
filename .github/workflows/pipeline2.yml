@@ -26,4 +26,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: demo-latest
-          path: /upload/demo-1.0-SNAPSHOT-runner.exe
+          path: /src/main/resources/demo.exe
