@@ -17,7 +17,7 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: '17'
-      - name: Compile and/or test our code
+      - name: Compile our code
         run: mvn compile
       - name: Run tests
         run: mvn test
