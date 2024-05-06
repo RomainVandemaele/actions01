@@ -13,6 +13,5 @@ public class Controller {
     @ResponseStatus(HttpStatus.OK)
     public String getOk() {
         return "ok";
-        //return new ResponseEntity<String>("ok", HttpStatus.OK);
     }
 }
