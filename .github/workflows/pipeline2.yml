@@ -1,0 +1,29 @@
+name: Build GraavLM pipeline
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup GraalVM
+        uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '17'
+          distribution: 'graalvm'
+
+      - name: Install to a native executable
+        run: mvn install -Dnative
+
+      - name: Upload binary
+        uses: actions/upload-artifact@v2
+        with:
+          name: demo-latest
+          path: /upload/demo-1.0-SNAPSHOT-runner*
