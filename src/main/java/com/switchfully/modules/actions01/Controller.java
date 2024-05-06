@@ -2,6 +2,7 @@ package com.switchfully.modules.actions01;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -12,5 +13,6 @@ public class Controller {
     @ResponseStatus(HttpStatus.OK)
     public String getOk() {
         return "ok";
+        //return new ResponseEntity<String>("ok", HttpStatus.OK);
     }
 }
