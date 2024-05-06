@@ -18,3 +18,4 @@ jobs:
           distribution: 'adopt'
           java-version: '17'
       - name: Compile and/or test our code
+        run: mvn clean compile exec:java
